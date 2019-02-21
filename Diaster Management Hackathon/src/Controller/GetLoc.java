@@ -43,7 +43,7 @@ public class GetLoc extends HttpServlet {
 			st.setString(1,name);
 			st.setString(2,mob);
 			st.setString(3,latt);
-			st.setString(4,longi);
+			st.setString(4,latt);
 			st.setString(5,longi);
 
 			int i=st.executeUpdate();
@@ -64,7 +64,10 @@ public class GetLoc extends HttpServlet {
 		System.out.println("Latti"+latt);
 		System.out.println(longi);
 		response.getWriter().append("Served at: ").append(request.getContextPath());
-		response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
+		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
+	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
+
+		response.sendRedirect("All.jsp");
 	}
 
 
