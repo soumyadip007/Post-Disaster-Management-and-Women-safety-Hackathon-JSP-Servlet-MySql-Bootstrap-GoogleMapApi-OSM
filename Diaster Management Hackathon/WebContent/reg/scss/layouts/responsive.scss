@@ -1,0 +1,19 @@
+//end 1200px
+@media screen and (max-width: 1024px) {
+    .container {
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 768px) {
+    
+    .container {
+        width: calc( 100% - 30px);
+        max-width: 100%;
+    }
+}
+//end 575px
+@media screen and (max-width: 480px) {
+    .appointment-form {
+        padding: 50px 30px 70px 30px;
+    }
+}

@@ -50,8 +50,8 @@ public class GetLoc extends HttpServlet {
 			st.setString(3,type);
 			st.setString(4,latt);
 			st.setString(5,longi);
-			st.setString(7,age);
-			st.setString(8,blood);
+			st.setString(6,age);
+			st.setString(7,blood);
 			int i=st.executeUpdate();
 		
 		} catch (SQLException e) {
@@ -73,7 +73,7 @@ public class GetLoc extends HttpServlet {
 		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
 	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
 
-		response.sendRedirect("All.jsp");
+		response.sendRedirect("Control.jsp");
 	}
 
 
