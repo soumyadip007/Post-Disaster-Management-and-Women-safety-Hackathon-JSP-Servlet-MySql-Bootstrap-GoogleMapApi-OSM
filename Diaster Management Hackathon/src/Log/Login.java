@@ -33,7 +33,7 @@ public class Login extends HttpServlet {
 			session.setAttribute("username",user);
 				try {
 					
-					response.sendRedirect("All.jsp");
+					response.sendRedirect("Control.jsp");
 
 				} catch (IOException e) {
 					// TODO Auto-generated catch block

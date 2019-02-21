@@ -1,9 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    
 <%@page import="java.util.Base64" import="java.io.UnsupportedEncodingException" %>
     <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
     <%@ taglib prefix="sql" uri="http://java.sun.com/jsp/jstl/sql" %>
-  
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>All Data</title>
+    <title>Admin page</title>
    <link rel="shortcut icon" type="image/png" href="static/ax9eqvs2_heart-logo.png"/>
     
 
@@ -34,28 +34,33 @@
   </head>
 
 
+
   <body id="page-top">
+
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">matchmaker.lightningspeeddating.com</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp">Get-Saved</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
       </button>
 
       <!-- Navbar Search -->
-      
+      <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+         
+        </div>
+      </form> 
 
       <!-- Navbar -->
       <ul class="navbar-nav ml-auto ml-md-0">
-      
+        
+       
         <li class="nav-item dropdown no-arrow">
           <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-user-circle fa-fw"></i>
           </a>
           <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-            <a class="dropdown-item" href="#">Settings</a>
-            <a class="dropdown-item" href="#">Activity Log</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="Logout" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
@@ -68,8 +73,13 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-        
-     <!--    <li class="nav-item dropdown">
+        <li class="nav-item active">
+          <a class="nav-link" href="Control.jsp">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+       <!--  <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-fw fa-folder"></i>
             <span>Pages</span>
@@ -84,14 +94,8 @@
             <a class="dropdown-item" href="404.html">404 Page</a>
             <a class="dropdown-item" href="blank.html">Blank Page</a>
           </div>
-        </li> -->
-      <li class="nav-item">
-          <a class="nav-link" href="All.jsp">
-            <i class="fas fa-fw fa-table"></i>
-            <span>All Users</span></a>
-        </li>
-       
-       
+        </li>--> 
+      
       </ul>
 
       <div id="content-wrapper">
@@ -103,11 +107,134 @@
             <li class="breadcrumb-item">
               <a href="AdminHome.jsp">Dashboard</a>
             </li>
-            <li class="breadcrumb-item active">Tables</li>
+            <li class="breadcrumb-item active">Overview</li>
           </ol>
 
-     
+          <!-- Icon Cards-->
          
+
+          <!-- Area Chart Example
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-chart-area"></i>
+              Area Chart Example</div>
+            <div class="card-body">
+              <canvas id="myAreaChart" width="100%" height="30"></canvas>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div> -->
+
+          <!-- DataTables Example -->
+        
+
+           
+          <div class="card mb-3">
+            <div class="card-header">
+              <i class="fas fa-table"></i>
+              Data Table Example</div>
+            <div class="card-body">
+              <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                  <thead>
+                    <tr>
+                     	<th>Id</th>
+                      <th>Name</th>
+                      <th>type</th>
+                         <th>Age</th>
+                      <th>Blood Group</th>
+                      <th>Phone</th>
+                      <th>Get Location</th>
+                      <th>Police Station</th>
+                       <th>Fire Brigade</th>
+                        <th>Hospital</th>
+                        <th>Time</th>
+                       <th>Lattitude</th>
+                      <th>Longitude</th>
+                      
+                    </tr>
+                  </thead>
+                  <tfoot>
+                    <tr> 		
+                    	<th>Id</th>
+                      <th>Name</th>
+                          <th>type</th>
+                         <th>Age</th>
+                      <th>Blood Group</th>
+                      <th>Phone</th>
+                      <th>Get Location</th>
+                      <th>Police Station</th>
+                       <th>Fire Brigade</th>
+                        <th>Hospital</th>
+                        <th>Time</th>
+                       <th>Lattitude</th>
+                      <th>Longitude</th>
+                    </tr>
+                  <tbody>
+        
+          
+       
+       
+         <!--   <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	        url="jdbc:mysql://localhost:3306/matchmaking database mr. dan"
+	        user="root" password=""
+	    /> 
+	     --> 
+	     <sql:setDataSource
+	        var="con"
+	        driver="com.mysql.jdbc.Driver"
+	        url="jdbc:mysql://localhost:3306/hackathon"
+	        user="root" password=""
+	    /> 
+	      
+	      
+	     
+	      
+	     
+	
+	     
+	    <sql:query var="listUsers"   dataSource="${con}">
+	        SELECT * FROM hack ;
+	    </sql:query>
+    
+    
+                    <c:forEach var="user"
+                     items="${listUsers.rows}">
+           
+                    <tr>
+                   
+                         <td><strong>${user.id}<strong></strong></td>
+                      <td>${user.name}</td>
+                         <td>${user.type}</td>
+                      <td>${user.age}</td>
+                      <td>${user.blood}</td>
+                      <td>${user.ph}</td>
+                       
+            <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
+                  
+                     <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:Crimson ;">Police Station</a></strong></td>
+                 
+               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
+                   
+                     <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LimeGreen ;">Hospital</a></strong></td>
+                
+                      <td>${user.time}</td>
+                      <td>${user.latt}</td>
+                      
+                        <td>${user.longi}</td>
+                     
+                    </tr>
+                  
+                </c:forEach>
+                  
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          </div>
+
         <!-- /.container-fluid -->
 
         <!-- Sticky Footer -->
@@ -131,6 +258,8 @@
     </a>
 
     <!-- Logout Modal-->
+   
+   
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -149,6 +278,9 @@
       </div>
     </div>
 
+   
+   
+   
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -157,6 +289,7 @@
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
     <!-- Page level plugin JavaScript-->
+    <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/datatables/jquery.dataTables.js"></script>
     <script src="vendor/datatables/dataTables.bootstrap4.js"></script>
 
@@ -165,6 +298,7 @@
 
     <!-- Demo scripts for this page-->
     <script src="js/demo/datatables-demo.js"></script>
+    <script src="js/demo/chart-area-demo.js"></script>
 
   </body>
 
