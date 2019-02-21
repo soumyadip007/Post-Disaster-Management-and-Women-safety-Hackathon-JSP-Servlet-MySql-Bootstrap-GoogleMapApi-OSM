@@ -28,24 +28,30 @@ public class GetLoc extends HttpServlet {
 		
 		String name=request.getParameter("name");
 		String mob=request.getParameter("phone");
-		String type=request.getParameter("latt");
+		String type=request.getParameter("type");
 		String latt=request.getParameter("latt");
 		String longi=request.getParameter("longi");
+		String age=request.getParameter("age");
+		String blood=request.getParameter("blood");
 		try {
 		
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		
 		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/hackathon","root","");
-		PreparedStatement st=con.prepareStatement("INSERT INTO hack(name,ph,type,latt,longi) values(?,?,?,?,?)");
+		
+		//Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
+		
+		PreparedStatement st=con.prepareStatement("INSERT INTO hack(name,ph,type,latt,longi,age,blood) values(?,?,?,?,?,?,?)");
 		
 		
 			st.setString(1,name);
 			st.setString(2,mob);
-			st.setString(3,latt);
+			st.setString(3,type);
 			st.setString(4,latt);
 			st.setString(5,longi);
-
+			st.setString(7,age);
+			st.setString(8,blood);
 			int i=st.executeUpdate();
 		
 		} catch (SQLException e) {

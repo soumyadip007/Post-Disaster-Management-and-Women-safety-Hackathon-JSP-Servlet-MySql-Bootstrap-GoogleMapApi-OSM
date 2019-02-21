@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Click the button to get your coordinates.</p>
+
+<p id="demo"></p>
+<button  onclick="getLocation()">Get Address</button>
+ 
+<form action="GetLoc">
+  
+  Full name:<br> <input type="text" name="name"  required=""><br>
+  
+  Mobile no.:<br> <input type="text" name="phone" required="" ><br>
+  
+  latitude:<br><input type="text" name="latt" id="latt"><br>
+  
+  slongitude:<br><input type="tel" name="longi" required=""  id="longi"><br>
+ 
+  <button type ="submit"  required="" onclick="getLocation()">Send</button>
+  
+</form>
+
+<script>
+var x = document.getElementById("demo");
+var y,z;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+  y=position.coords.latitude;
+  z=position.coords.longitude;
+  document.getElementById("latt").value =y;
+  document.getElementById("longi").value =z;
+
+}
+
+</script>
+
+</body>
