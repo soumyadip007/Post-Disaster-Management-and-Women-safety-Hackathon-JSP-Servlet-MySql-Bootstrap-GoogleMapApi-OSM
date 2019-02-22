@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sign Up Form by Colorlib</title>
+    <title>Form Page</title>
 
     <!-- Font Icon -->
     <link rel="stylesheet" href="reg/fonts/material-icon/css/material-design-iconic-font.min.css">
@@ -12,11 +12,12 @@
     <!-- Main css -->
     <link rel="stylesheet" href="reg/css/style.css">
 </head>
-<body>
+
+<body onload="myFunction()" >
 
 
 <p id="demo"></p>
-    <div class="main">
+    <div class="main" >
 
         <div class="container">
             <form action="GetLoc" class="appointment-form" id="appointment-form">
@@ -42,19 +43,25 @@
                 
                 
                 <div class="form-submit">
-                 <button type ="submit"   class="submit" onclick="getLocation()">Send</button>
+                 <button type ="submit"   class="submit"  onclick="getLocation()">Send</button>
   
                  </div>
             </form>
         </div>
 
     </div>
-    <button class="submit" onclick="getLocation()">Co-ordinate</button>
-  
-    <!-- JS -->
+   <!--  <button class="submit" onclick="getLocation()">Co-ordinate</button>
+  	
+    JS -->
     <script src="reg/vendor/jquery/jquery.min.js"></script>
     <script src="reg/js/main.js"></script>
     
+<script>
+function myFunction() {
+  alert("We need your address");
+  getLocation();
+}
+</script>
 <script>
 var x = document.getElementById("demo");
 var y,z;

@@ -33,7 +33,11 @@
 
   </head>
 
-
+<%
+  response.setHeader("Cache-Control","no-cache,no-store,must-revaildate");
+	if(session.getAttribute("username")==null){
+	response.sendRedirect("Login.jsp");}
+	%>
 
   <body id="page-top">
 
@@ -174,20 +178,20 @@
           
        
        
-         <!--   <sql:setDataSource
+          <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
 	        url="jdbc:mysql://localhost:3306/matchmaking database mr. dan"
 	        user="root" password=""
 	    /> 
-	     --> 
-	     <sql:setDataSource
+	    
+	       <!--<sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	        url="jdbc:mysql://localhost:3306/hackathon"
-	        user="root" password=""
+	        url="jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon"
+	        user="root" password="THHrio35634"
 	    /> 
-	      
+	       --> 
 	      
 	     
 	      
