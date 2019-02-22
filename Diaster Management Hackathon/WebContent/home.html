@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user_details</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+<p id="demo"></p>
+    <nav class="navbar navbar-light navbar-expand-md" style="background-color:#3b4045;">
+        <div class="container-fluid"><a class="navbar-brand" href="#" style="color:rgba(255,255,255,0.9);">Mappathon</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"></button>
+            <div class="collapse navbar-collapse" id="navcol-1"></div>
+        </div>
+    </nav>
+    <div class="contact-clean">
+        <form method="get" action="GetLoc">
+         
+         
+            <h2 class="text-center">Enter Your Details</h2>
+            <div class="form-group">
+            <input class="form-control" type="text" name="name" required="" placeholder="Name" autofocus="">
+            
+            <input class="form-control" type="text" name="age" required="" placeholder="Age" maxlength="2" minlength="2">
+            <input class="form-control" type="text"  name="blood" required="" placeholder="Blood Group" maxlength="2" minlength="2">
+              
+                 <input type="hidden" name="latt" id="latt"   hidden />
+                    <input type="hidden" name="longi" id="longi" hidden />
+                       <input type="text" class="form-control" name="ad" id="ad" placeholder="Your Lattitude and longitude" required readonly/>
+                       
+                    
+                    <input class="form-control" type="text" name="name" required="" placeholder="Your Phone Number" maxlength="13" minlength="13"></div><small class="form-text text-danger">Please enter a correct phone number.</small>
+            <input
+                class="form-control" type="text" name="phone" required="" placeholder="Emergency Contact" maxlength="13" minlength="13"><small class="form-text text-danger">Please enter a correct phone number.</small>
+              
+               <div class="form-control"">
+                        <select name="type" id="type" required>
+                            <option slected value="">Disaster type</option>
+                            <option value="society">Flood</option>
+                            <option value="language">Fire</option>
+                        </select>
+                    </div>
+                <div class="form-group"><button onclick="getLocation()" class="btn btn-primary" type="submit">send </button></div>
+        </form>
+    </div>
+      
+<script>
+var x = document.getElementById("demo");
+var y,z;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  
+  y=position.coords.latitude;
+  z=position.coords.longitude;
+  document.getElementById("latt").value =y;
+  document.getElementById("longi").value =z;
+  document.getElementById("ad").value =z+" "+y;
+
+}
+
+</script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

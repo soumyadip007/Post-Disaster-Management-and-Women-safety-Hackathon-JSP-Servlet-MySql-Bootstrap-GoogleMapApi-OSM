@@ -73,7 +73,7 @@ public class GetLoc extends HttpServlet {
 		//response.sendRedirect("https://www.latlong.net/c/?lat="+latt+"&long="+longi);
 	//	https://www.google.co.in/maps/@22.5601086,88.4904909,21z
 
-		response.sendRedirect("Control.jsp");
+		response.sendRedirect("success.html");
 	}
 
 

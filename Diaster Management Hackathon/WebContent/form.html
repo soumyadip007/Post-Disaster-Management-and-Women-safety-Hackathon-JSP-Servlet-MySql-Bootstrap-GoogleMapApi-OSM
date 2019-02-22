@@ -1,26 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign Up Form by Colorlib</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="reg/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="reg/css/style.css">
+</head>
 <body>
 
-<p>Click the button to get your coordinates.</p>
 
 <p id="demo"></p>
-<button  onclick="getLocation()">Get Address</button>
- 
-<form action="GetLoc">
-  
-  Full name:<br> <input type="text" name="name"  required=""><br>
-  
-  Mobile no.:<br> <input type="text" name="phone" required="" ><br>
-  
-  latitude:<br><input type="text" name="latt" id="latt"><br>
-  
-  slongitude:<br><input type="tel" name="longi" required=""  id="longi"><br>
- 
-  <button type ="submit"  required="" onclick="getLocation()">Send</button>
-  
-</form>
+    <div class="main">
 
+        <div class="container">
+            <form action="GetLoc" class="appointment-form" id="appointment-form">
+                <h2>Contact to Disaster Team</h2>
+                <div class="form-group-1">
+                    <input type="text" name="name" id="title" placeholder="Enter your name" required />
+                    <input type="text" name="age" id="name" placeholder="Enter your age" required />
+                   <input type="number" name="phone" id="phone" placeholder="Phone number" required />
+                    <input type="text" name="blood" id="phone" placeholder="Enter your Blood group (Optional)"  />
+                   
+                    <input type="hidden" name="latt" id="latt"   hidden />
+                    <input type="hidden" name="longi" id="longi" hidden />
+                       <input type="text" name="ad" id="ad" placeholder="Your Lattitude and longitude" required readonly/>
+                 
+                    <div class="select-list">
+                        <select name="type" id="type" required>
+                            <option slected value="">Disaster type</option>
+                            <option value="society">Flood</option>
+                            <option value="language">Fire</option>
+                        </select>
+                    </div>
+                </div>
+                
+                
+                <div class="form-submit">
+                 <button type ="submit"   class="submit" onclick="getLocation()">Send</button>
+  
+                 </div>
+            </form>
+        </div>
+
+    </div>
+    <button class="submit" onclick="getLocation()">Co-ordinate</button>
+  
+    <!-- JS -->
+    <script src="reg/vendor/jquery/jquery.min.js"></script>
+    <script src="reg/js/main.js"></script>
+    
 <script>
 var x = document.getElementById("demo");
 var y,z;
@@ -33,15 +67,18 @@ function getLocation() {
 }
 
 function showPosition(position) {
-  x.innerHTML = "Latitude: " + position.coords.latitude + 
-  "<br>Longitude: " + position.coords.longitude;
+  
   y=position.coords.latitude;
   z=position.coords.longitude;
   document.getElementById("latt").value =y;
   document.getElementById("longi").value =z;
+  document.getElementById("ad").value =z+" "+y;
 
 }
 
 </script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 
-</body>
+
+
+</html>
