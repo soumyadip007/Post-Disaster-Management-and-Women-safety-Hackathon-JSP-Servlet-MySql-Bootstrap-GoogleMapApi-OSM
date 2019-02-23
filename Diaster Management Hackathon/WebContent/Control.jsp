@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-      <a class="navbar-brand mr-1" href="AdminHome.jsp">Get-Saved</a>
+      <a class="navbar-brand mr-1" href="AdminHome.jsp">GetSaved.com</a>
 
       <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
         <i class="fas fa-bars"></i>
@@ -81,6 +81,12 @@
           <a class="nav-link" href="Control.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="http://localhost/webapp/user-map.php">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>All Places</span>
           </a>
         </li>
        <!--  <li class="nav-item dropdown">
@@ -181,21 +187,11 @@
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	        url="jdbc:mysql://localhost:3306/matchmaking database mr. dan"
+	        url="jdbc:mysql://localhost:3306/hackathon"
 	        user="root" password=""
 	    /> 
 	    
-	       <!--<sql:setDataSource
-	        var="con"
-	        driver="com.mysql.jdbc.Driver"
-	        url="jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon"
-	        user="root" password="THHrio35634"
-	    /> 
-	       --> 
-	      
-	     
-	      
-	     
+	    
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
@@ -236,7 +232,7 @@
                 </table>
               </div>
             </div>
-            <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+            <div class="card-footer small text-muted">GetSaved.com</div>
           </div>
 
         <!-- /.container-fluid -->
@@ -245,7 +241,7 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Your Website 2018</span>
+              <span>Copyright © Hackathon UEMK 2019</span>
             </div>
           </div>
         </footer>
