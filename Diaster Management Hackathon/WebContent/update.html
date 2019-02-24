@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather Tutorial</title>
+    
+	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+ <style>
+   #deg{
+     font-weight: bolder;
+     font-size: 25px;
+   }
+ </style>
+          
+  </head>
+<body>
+  <div class="container">
+ <div class="row">
+    <div class="col l3 m3 s12"></div>
+    <div class="col l6 m6 s12">
+      <h3>Know Your Weather</h3>
+    
+          <form>
+            <input type="text" id="search" placeholder="search by city">
+            <input type="submit" id="btn" class="btn">
+          </form>
+     
+      
+      <div id="loader" style="display:none;">
+        <div class="progress">
+          <div class="indeterminate"></div>
+        </div>
+      </div>
+      
+    </div>
+    <div class="col l3 m6 s12"></div>
+ </div>
+</div>
+
+<div class="container">
+  
+<div class="row">
+  <div id="weather-data"></div>
+</div>
+  
+</div>
+
+
+
+
+<script src="js1/jquery-3.3.1.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+    
+    $("#btn").click(function(e){
+      
+        e.preventDefault();
+        let query = $("#search").val();
+        let url = "http://api.openweathermap.org/data/2.5/weather?q="+query+"&units=metric&APPID=dd5ddf8921e152bd97a8fd4b5cee1f90";
+        
+    if(query !== ""){
+     
+     $.ajax({
+       
+       url: url,
+       method: "GET",
+       dataType:"json",
+       
+       beforeSend: function(){
+         $("#loader").show();
+        $("#weather-data").html("");
+       },
+       
+       complete: function(){
+         $("#loader").hide();
+        // $("#search").val("");
+       },
+       
+       success: function(data){
+         let output =`
+            <div class="col l4 m6 s12">
+            <div class="card-panel">
+            <p>Current weather in: <b>${data.name},${data.sys.country}</b></p>
+            <p>Weather description: <b>${data.weather[0].description}</b></p>
+            
+             <img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" class="responsive-img">
+              <span id="deg">${data.main.temp} &deg;c</span>
+            </div>
+            </div>
+          <div class="col l4 m6 s12">
+            <div class="card-panel">
+            <table>
+                <tr>
+                  <th>Description</th>
+                  <th>Values</th>
+                </tr>
+                <tr>
+                  <td>Wind Speed</td>
+                  <td>${data.wind.deg} m/s</td>
+                </tr>
+              
+                <tr>
+                  <td>Pressure</td>
+                  <td>${data.main.pressure} hpa</td>
+                </tr>
+                
+                  <tr>
+                  <td>Humidity</td>
+                  <td>${data.main.humidity} %</td>
+                 </tr>
+                 
+                  <tr>
+                  <td>Sunrise</td>
+                  <td>${data.sys.sunrise}</td>
+                 </tr>
+                 
+                  <tr>
+                  <td>Sunset</td>
+                  <td>${data.sys.sunset}</td>
+                 </tr>
+                 
+                 
+                  <tr>
+                  <td>Geo coords</td>
+                  <td>[ ${data.coord.lon}, ${data.coord.lat} ]</td>
+                 </tr>
+                            
+            </table>
+            </div>
+            </div>
+              <div class="col l4 m4 s12"></div>
+         `;
+        
+         
+         
+         $("#weather-data").html(output);
+         
+         
+       },
+       
+       error: function(){
+         let errorMsg = `<div style="text-align:center; color:red; font-size:20px;">Error - pliz check your query or internet settings</div>`;
+         $("#weather-data").html(errorMsg);
+         console.log("");
+       }
+       
+
+     });
+     
+    }else{
+      let checkValue = `<div style="text-align:center; color:red; font-size:20px;">Enter something. eg city name</div>`;
+      $("#weather-data").html(checkValue);
+    }
+      
+    })
+   
+    
+    
+  });
+  
+</script>
+
+</body>
+</html>

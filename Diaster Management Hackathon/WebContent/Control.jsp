@@ -187,10 +187,8 @@
           <sql:setDataSource
 	        var="con"
 	        driver="com.mysql.jdbc.Driver"
-	        url="jdbc:mysql://localhost:3306/hackathon"
-	        user="root" password=""
-	    /> 
-	    
+	       url="jdbc:mysql://localhost:3306/hackathon"
+	        user="root" password=""  /> 
 	    
 	
 	     

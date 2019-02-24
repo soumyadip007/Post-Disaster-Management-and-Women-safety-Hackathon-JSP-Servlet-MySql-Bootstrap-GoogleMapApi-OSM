@@ -40,7 +40,7 @@ public class GetLoc extends HttpServlet {
 		
 		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/hackathon","root","");
 		
-		//Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
+	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
 		PreparedStatement st=con.prepareStatement("INSERT INTO hack(name,ph,type,latt,longi,age,blood) values(?,?,?,?,?,?,?)");
 		
