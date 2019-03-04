@@ -1,0 +1,27 @@
+# WOMAN SECURITY APP:
+
+➢ App must include an EMERGENCY Button .
+
+
+➢ On Clicking that particular Button, a SMS will be sent to all HelpLine Nos. concurrently
+along with Current Location Coordinate( GPS integration)
+
+
+➢ Add HelpLine Number(s) on your own( Max. 3 HelpLine Nos. Can be added for
+simplicity).Better if a Database of conact List can be maintained.
+
+
+➢ ‘Follow Me’ Feature once activated will send location coordinate for every 10mins in
+form of SMS to HelpLine Nos.(SMS Charges may apply.)
+
+
+➢ ‘Fake Call’ Button (For a Phone Call to the Same Phone itself ie., explicitly giving a
+call to own phone from arbitrary Generated Contact Number).This feature may require
+the help of Internet Connection.
+
+
+➢ Receiving and Rejecting ‘Fake Call’ by anyone after button press will take instant
+snaps randomly in Burst Mode and Send those pics to Phone Database or same HelpLine
+E-Mails already previously saved in DataBase so that Face(Portrait Photo) of Attacker
+can ease out Investigation.Also Live Camera Video Recording Feature can be optionally
+Turned on Automatically while taking random snaps.
