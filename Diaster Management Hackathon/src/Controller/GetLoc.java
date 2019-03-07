@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -35,10 +36,11 @@ public class GetLoc extends HttpServlet {
 		String blood=request.getParameter("blood");
 		try {
 		
+		ServletContext ct=getServletContext();
 		
 		Class.forName("com.mysql.jdbc.Driver");
 		
-		Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/hackathon","root","");
+		Connection con=(Connection) DriverManager.getConnection(ct.getInitParameter("path"),ct.getInitParameter("user"),ct.getInitParameter("pass"));
 		
 	//	Connection con=(Connection) DriverManager.getConnection("jdbc:mysql://node12654-getsaved.cloudjiffy.net/hackathon","root","THHrio35634");
 		
