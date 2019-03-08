@@ -199,7 +199,7 @@
 
     <script>
 
-        var saved_markers = <?= get_saved_locations() ?>;
+       var saved_markers = [77.216721,28.644800];
         var user_location = [77.216721,28.644800];
         
         mapboxgl.accessToken = 'pk.eyJ1Ijoic2Fwc2F3ZWIiLCJhIjoiY2pzZml4M2w2MDNiNDRhbDU5dGplNXZ0YSJ9.RMs9l2zC73gSH3rDNCyb2g';
@@ -221,13 +221,13 @@
         // After the map style has loaded on the page, add a source layer and default
         // styling for a single point.
         map.on('load', function() {
-            addMarker(user_location,'load');
+           addMarker(user_location,'load');
             add_markers(saved_markers);
 
             // Listen for the `result` event from the MapboxGeocoder that is triggered when a user
             // makes a selection and add a symbol that matches the result.
             geocoder.on('result', function(ev) {
-                alert("aaaaa");
+                alert("GetSaved.com");
                 console.log(ev.result.center);
 
             });
@@ -278,7 +278,7 @@
             event.preventDefault();
             var lat = $('#lat').val();
             var lng = $('#lng').val();
-            var url = 'locations_model.php?add_location&lat=' + lat + '&lng=' + lng;
+        //    var url = 'locations_model.php?add_location&lat=' + lat + '&lng=' + lng;
             $.ajax({
                 url: url,
                 method: 'GET',

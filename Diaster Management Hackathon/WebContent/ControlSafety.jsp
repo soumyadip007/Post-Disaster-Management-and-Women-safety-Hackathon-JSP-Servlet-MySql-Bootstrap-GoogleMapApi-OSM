@@ -68,12 +68,7 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="Logout" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
-        </li>
-          <li class="nav-item ">
-          <a class="nav-link active" href="http://localhost/webapp/user-map.php">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Women Safety</span>
-          </a>
+          
         </li>
       </ul>
 
@@ -83,7 +78,7 @@
 
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
-  
+       
        <li class="nav-item ">
           <a class="nav-link" href="http://localhost:8032/Diaster_Management_Hackathon/Control.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
@@ -170,12 +165,10 @@
                      	<th>Id</th>
                       <th>Name</th>
                       <th>type</th>
-                         <th>Age</th>
-                      <th>Blood Group</th>
                       <th>Phone</th>
+                      <th>Msg</th>
                       <th>Get Location</th>
                       <th>Police Station</th>
-                       <th>Fire Brigade</th>
                         <th>Hospital</th>
                         <th>Time</th>
                        <th>Lattitude</th>
@@ -185,15 +178,13 @@
                   </thead>
                   <tfoot>
                     <tr> 		
-                    	<th>Id</th>
+                    <th>Id</th>
                       <th>Name</th>
-                          <th>type</th>
-                         <th>Age</th>
-                      <th>Blood Group</th>
+                      <th>type</th>
                       <th>Phone</th>
+                      <th>Msg</th>
                       <th>Get Location</th>
                       <th>Police Station</th>
-                       <th>Fire Brigade</th>
                         <th>Hospital</th>
                         <th>Time</th>
                        <th>Lattitude</th>
@@ -219,7 +210,7 @@
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM hack ;
+	        SELECT * FROM safe ;
 	    </sql:query>
     
     
@@ -230,17 +221,14 @@
                    
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
-                         <td>${user.type}</td>
-                      <td>${user.age}</td>
-                      <td>${user.blood}</td>
-                      <td>${user.ph}</td>
+                         <td>${user.help}</td>
+                      <td>${user.phone}</td>
+                      <td>${user.msg}</td>
                        
             <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
                   
                      <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:Crimson ;">Police Station</a></strong></td>
-                 
-               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
-                   
+                     
                      <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LimeGreen ;">Hospital</a></strong></td>
                 
                       <td>${user.time}</td>
