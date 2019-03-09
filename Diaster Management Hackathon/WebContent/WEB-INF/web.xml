@@ -13,9 +13,7 @@
     <param-name>pass</param-name>
     <param-value></param-value>
   </context-param>
-  
-  
-   <servlet>
+  <servlet>
     <servlet-name>JavaEmail</servlet-name>
     <servlet-class>Controller.Safety</servlet-class>
   </servlet>
