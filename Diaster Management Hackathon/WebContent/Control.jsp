@@ -80,7 +80,7 @@
       <ul class="sidebar navbar-nav">
   
        <li class="nav-item active">
-          <a class="nav-link" href="http://localhost:8032/Diaster_Management_Hackathon/Control.jsp">
+          <a class="nav-link" href="Control.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Disaster Dashboard</span>
           </a>
@@ -92,7 +92,7 @@
           </a>
         </li>
           <li class="nav-item  ">
-          <a class="nav-link " href="http://localhost:8032/Diaster_Management_Hackathon/ControlSafety.jsp">
+          <a class="nav-link " href="ControlSafety.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Women Safety</span>
           </a>
