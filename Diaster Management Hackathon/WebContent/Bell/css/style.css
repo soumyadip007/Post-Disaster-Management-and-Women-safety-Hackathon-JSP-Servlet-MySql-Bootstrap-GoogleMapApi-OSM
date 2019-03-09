@@ -117,7 +117,7 @@ a:hover {
 .hero {
   display: table;
   position: relative;
-  background-image: "Bell/css/bg1.jpg";
+  background-image: url(../img/bg1.jpg);
   background-size: cover;
   padding: 150px 0;
   color: #fff;

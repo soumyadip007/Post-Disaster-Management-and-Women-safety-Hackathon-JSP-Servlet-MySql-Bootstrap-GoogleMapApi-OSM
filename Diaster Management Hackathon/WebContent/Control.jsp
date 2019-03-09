@@ -69,12 +69,7 @@
             <a class="dropdown-item" href="Logout" data-toggle="modal" data-target="#logoutModal">Logout</a>
           </div>
         </li>
-          <li class="nav-item ">
-          <a class="nav-link active" href="http://localhost/webapp/user-map.php">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Women Safety</span>
-          </a>
-        </li>
+
       </ul>
 
     </nav>
@@ -84,19 +79,19 @@
       <!-- Sidebar -->
       <ul class="sidebar navbar-nav">
   
-       <li class="nav-item ">
+       <li class="nav-item active">
           <a class="nav-link" href="http://localhost:8032/Diaster_Management_Hackathon/Control.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Disaster Dashboard</span>
           </a>
         </li>
-	 <li class="nav-item ">
+	 <li class="nav-item  ">
           <a class="nav-link" href="http://localhost/webapp/user-map.php">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Disaster Map</span>
           </a>
         </li>
-          <li class="nav-item active ">
+          <li class="nav-item  ">
           <a class="nav-link " href="http://localhost:8032/Diaster_Management_Hackathon/ControlSafety.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Women Safety</span>
