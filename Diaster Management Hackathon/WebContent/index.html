@@ -1,234 +1,469 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http	5EEEEEEEEEEEEEEEEEEEEEEEEEEE-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>GetSaved.com</title>
-    <meta name="author" content="Matthew Howell" />
-    <meta name="description" content="fullPage continuous scrolling demo." />
-    <meta name="keywords" content="fullpage,jquery,demo,scroll,loop,continuous" />
-    <meta name="Resource-type" content="Document" />
+    <meta charset="utf-8">
+    <title>Get Saved</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
 
+    <!-- Facebook Opengraph integration: https://developers.facebook.com/docs/sharing/opengraph -->
+    <meta property="og:title" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="">
+    <meta property="og:description" content="">
 
-	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
-    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="dist/fullpage.css" />
-    <link rel="stylesheet" type="text/css" href="examples/examples.css" />
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="examples/style.css">
-    <link rel="stylesheet" href="examples/Team-Boxed.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Twitter Cards integration: https://dev.twitter.com/cards/  -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
 
-    <!--[if IE]>
-        <script type="text/javascript">
-             var console = { log: function() {} };
-        </script>
-    <![endif]-->
+    <!-- Favicon -->
+    <link href="Bell/img/favicon.ico" rel="icon">
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript" src="dist/fullpage.js"></script>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
 
-    <script type="text/javascript">
-        //using document ready...
-        $(document).ready(function() {
+    <!-- Bootstrap CSS File -->
+    <link href="Bell/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-            //initialising fullpage.js in the jQuery way
-            $('#fullpage').fullpage({
-                sectionsColor: ['#ff5f45','#F6D55C', '#0798ec', '#fc6c7c', '#fec401','#ff5f45'],
-                navigation: true,
-                slidesNavigation: true,
-            });
+    <!-- Libraries CSS Files -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.2/css/all.css" rel="stylesheet">
 
-            // calling fullpage.js methods using jQuery
-            $('#moveSectionUp').click(function(e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSectionUp();
-            });
-
-            $('#moveSectionDown').click(function(e) {
-                e.preventDefault();
-                $.fn.fullpage.moveSectionDown();
-            });
-        });
-    </script>
-    
-    <script>
-    var myFullpage = new fullpage('#fullpage', {
-	
-	autoScrolling: true,
-	fitToSection: true,
-	fitToSectionDelay: 1000,
-	scrollBar: false,
-	
-
-	//Design
-	controlArrows: true,
-	verticalCentered: true,
-	sectionsColor : ['#ccc', '#fff'],
-	paddingTop: '3em',
-	paddingBottom: '10px',
-	fixedElements: '#header, .footer',
-	responsiveWidth: 0,
-	responsiveHeight: 0,
-	responsiveSlides: true,
-	parallax: true,
-	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
-	
-});
-    
-    </script>
-
-    <style type="text/css">
-        #actions {
-            position: fixed;
-            top: 73px;
-            left: 30px;
-            z-index: 99999;
-        }
-
-        #actions a {
-            background: rgba(0, 0, 0, 0.8);
-            padding: 7px;
-            margin: 2px;
-            color: #ccc;
-            display: inline-block;
-        }
-
-        #actions a:hover {
-            color: #fff;
-            background: #81A140;
-        }
-    </style>
+    <!-- Main Stylesheet File -->
+    <link href="Bell/css/style.css" rel="stylesheet">
 </head>
 
 <body>
+    <!-- Hero -->
 
-    <div id="fullpage">
-        <div class="section">
-            <div class="intro">
-                
-               <p class="center-text">Mappthon presents<br>Welcome to GetSaved.com. || We are 24x7 ready to help you.</p>
-                <div class="container">
-                	<div class="row">
-                		<div class="col-4"></div>
-                		<div class="col-4">
-                			<img src="img/hero.png" class="hero-img" alt="">
-                		</div>
-                		<div class="col-4"></div>
-                	</div>
+    <section class="hero">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <a class="hero-brand" href="index.html" title="Home"><img alt="Bell Logo" src="Bell/img/hero.png" style="width: 100%;"></a>
+                </div>
+            </div>
+
+            <div class="col-md-12">
+                <h1>
+                    GET SAVED
+                </h1>
+
+                <p class="tagline">
+                    ANYTIME. ALL THE TIME.
+                </p>
+                <a class="btn btn-full" href="#portfolio">Get Started Now</a>
+            </div>
+        </div>
+
+    </section>
+    <!-- /Hero -->
+
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+
+            <div id="logo" class="pull-left">
+                <a href="index.html"></a>
+            </div>
+
+            <nav id="nav-menu-container">
+                <ul class="nav-menu">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#portfolio">Quick Action</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- #nav-menu-container -->
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!-- About -->
+
+    <section class="about" id="about">
+        <div class="container text-center">
+            <h2>
+                About Bell Theme
+            </h2>
+
+            <p>
+                GET SAVED is a simple and secure multiplatform (web and app-based) Disaster Management System and Women Secuity System that provides decision support to management authorities through active involvement of the “crowd” at the site of a situation.
+            </p>
+
+            <div class="row stats-row">
+                <div class="stats-col text-center col-md-3 col-sm-6">
+                    <div class="circle">
+                        <span class="stats-no" data-toggle="counter-up">2032</span> PEOPLE HELPED
+                    </div>
+                </div>
+
+                <div class="stats-col text-center col-md-3 col-sm-6">
+                    <div class="circle">
+                        <span class="stats-no" data-toggle="counter-up">5000</span> Total user
+                    </div>
+                </div>
+
+                <div class="stats-col text-center col-md-3 col-sm-6">
+                    <div class="circle">
+                        <span class="stats-no" data-toggle="counter-up">1,463</span> Hours Of Support
+                    </div>
+                </div>
+
+                <div class="stats-col text-center col-md-3 col-sm-6">
+                    <div class="circle">
+                        <span class="stats-no" data-toggle="counter-up">15</span> Hard Workers
+                    </div>
                 </div>
             </div>
         </div>
-        
-        <div class="section">
+    </section>
+    <!-- /About -->
+    <!-- Parallax -->
+
+
+    <div class="container-fluid imagebox">
+        <div class="row">
+
+            <div class="col-md-4">
+                <img src="Bell/img/1.jpg" style="width: 100%; padding: 20px;" alt="">
+                <div class="text-center" style="color: #fff;">
+                <h2>
+                    Disaster Management
+                </h2>
+                
+                </div>
+
+
+            </div>
+
+            <div class="col-md-4">
+                <img src="Bell/img/w1.jpg" style="width: 100%; padding: 20px; background-size: contain;" alt="">
+                <div class="text-center" style="color: #fff;">
+                <h2>
+                    Women Security System
+                </h2>
+                
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+                <img src="Bell/img/bg2.jpg" style="width: 100%; padding: 20px;" alt="">
+                <div class="text-center" style="color: #fff;">
+                <h2>
+                    MAP MY STEPS
+                </h2>
+                
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <!-- /Parallax -->
+    <!-- Features -->
+
+    <section class="features" id="features">
         <div class="container">
-        	<p class="center-text1"><h1><a href="form.html" style="text-decoration:none;color:#000;">Register to Action Section</a></h1><br>
-The term disaster management includes all aspects of preventive and protective measures, preparedness, and organisation of relief operations for mitigating the impact of disaster on human beings and socioeconomic aspects of the disaster prone areas. ... Disaster leaves a trail of death and destruction.</p>
+            <h2 class="text-center">
+                Features
+            </h2>
+
+            <div class="row">
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fas fa-hand-paper"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                RealTime Support
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fa fa-envelope"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                24X7 Online
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fa fa-bell"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Innovative Ideas
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fas fa-map-marker-alt"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Realtime Location
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fas fa-star"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Important Contacts
+                            </h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feature-col col-lg-4 col-xs-12">
+                    <div class="card card-block text-center">
+                        <div>
+                            <div class="feature-icon">
+                                <span class="fas fa-comment"></span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h3>
+                                Security
+                            </h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        	<div class="container">
-        		<div class="row">
-        		<div class="col-3"></div>
-        			<div class="col-3">
-        		<a href="form.html">
-        			<button class="btn btn-dark" >
-  <span class="spinner-grow spinner-grow-sm"></span>Get Help</button></div>
-       	</a>
-       		<div class="col-3">
-       		<a href="update.html">
-       		<button class="btn btn-dark">
-  <span class="spinner-grow spinner-grow-sm"></span>Weather</button></div>
-       		<div class="col-3"></div>
-       		
-       		
-        		</div></a>
-        		
-        	</div>
-        </div>
-        
-        <div class="section">
-            <div class="slide">
-                <img  class="slider" src="img/1.jpg" alt="">
-            </div>
-            <div class="slide">
-                 <img  class="slider" src="img/2.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img class="slider" src="img/3.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img class="slider" src="img/6.jpg" alt="">
-            </div>
-        </div>
-        <div class="section">
-           <div class="container">
-           	<p class="center-text1">How We help People</p>
-           </div>
+    </section>
+    <!-- /Features -->
+    <!-- Call to Action -->
+    <section id="portfolio">
+        <section class="cta">
             <div class="container">
-            	<div class="row">
-            	
-            		<div class="col-3">
-            			<span class="dot"><h5 class="circle">Our Disaster Team</h5></span>
-            		</div>
-            		<div class="col-3">
-            			<span class="dot"><h5 class="circle">Police Station</h5></span>
-            		</div>
-            		<div class="col-3">
-            			<span class="dot"><h5 class="circle">Fire Brigade</h5></span>
-            		</div>
-            		<div class="col-3">
-            			<span class="dot"><h5 class="circle">Hospital & Nursing home</h5></span>
-            		</div>
-            		
-            	</div>
-            </div>
-        </div>
-        
-        
-        <div class="section">
-        	<div class="container">
-        		<div class="intro">
-                <div class="card">
-                    <div class="card-body">
-                        <h4 class="text-uppercase card-title" style="font-family:Roboto, sans-serif;font-size:27px;">About the project</h4>
-                        <p class="text-center card-text" style="color:rgb(0,0,0);font-weight:600;">Mapathpon app for emergency management personnel <br>for Flood Rescue Operation.</p>
-                    </div>
-                    <div class="card-body">
-                        <h4 class="text-uppercase text-center card-title" style="font-family:Roboto, sans-serif;font-size:27px;">details of the project</h4>
-                        <p class="text-center card-text" style="color:rgb(0,0,0);font-weight:600;">A Flood Rescue Operation app. It is integrated with live maps,emergency numbers and real time support at the time of emergency.</p>
-                    </div>
-                </div>
-                
-            </div>
-        	</div>
-        </div>
-        <div class="section">
-            <div class="team-boxed">
-        <div class="container">
-     <h2 class="text-center">Team </h2>
-            <div class="row people">
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="img/35.jpg">
-                        <h3 class="name"><strong>Soumyadip Chowdhury</strong>&nbsp;</h3>
-                        <p class="title">backend developer</p>
-                        <div class="social"><a href="https://github.com/soumyadip007"><i class="fa fa-github"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 item">
-                    <div class="box"><img class="rounded-circle" src="img/45.png">
-                        <h3 class="name">Saptarshi Sabui</h3>
-                        <p class="title">frontend design</p>
-                        <div class="social"><a href="https://github.com/sapsa07"><i class="fa fa-github"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-        </div>
-    </div>
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12 text-lg-center text-center">
+                        <h1 style="color: #fff;">QUICK ACTION</h1>
 
-    <script type="text/javascript" src="examples.js"></script>
+                    </div>
+                    <div class="col-lg-3 col-sm-12 text-lg-center text-center">
+                        <a class="btn btn-ghost" href="#">Disaster Management</a>
+
+                    </div>
+
+                    <div class="col-lg-3 col-sm-12 text-lg-right text-center">
+
+                        <a class="btn btn-ghost" href="#">Women Security</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </section>
+    <!-- /Call to Action -->
+
+
+
+    <!-- Team -->
+
+    <section class="team" id="team">
+        <div class="container">
+            <h2 class="text-center">
+                Meet our team
+            </h2>
+
+            <div class="row">
+                <div class="col-sm-3 col-xs-6"></div>
+                <div class="col-sm-3 col-xs-6">
+                    <div class="card card-block">
+                        <a href="#"><img alt="" class="team-img" src="Bell/img/35.jpg">
+              <div class="card-title-wrap">
+                <span class="card-title">Soumyadip Chowdhury</span> <span class="card-text">Backend(Server & Datsbase) Developer</span>
+              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="https://github.com/soumyadip007"><i class="fab fa-github"></i></a>
+                        </nav>
+                    </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-sm-3 col-xs-6">
+                <div class="card card-block">
+                    <a href="#"><img alt="" class="team-img" src="Bell/img/45.png">
+              <div class="card-title-wrap">
+                <span class="card-title">Saptarshi Sabui</span> <span class="card-text">Frontend Developer</span>
+              </div>
+
+              <div class="team-over">
+                <h4 class="hidden-md-down">
+                  Connect with me
+                </h4>
+
+                <nav class="social-nav">
+                  <a href="https://github.com/sapsa07"><i class="fab fa-github"></i></a>
+                    </nav>
+                </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-sm-3 col-xs-6"></div>
+        </div>
+        </div>
+    </section>
+    <!-- /Team -->
+    <!-- @component: footer -->
+
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="section-title">Contact Us</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-4">
+                    <div class="info">
+                        <div>
+                            <i class="fa fa-map-marker"></i>
+                            <p>Kolkata,<br>India</p>
+                        </div>
+
+                        <div>
+                            <i class="fa fa-envelope"></i>
+                            <p>info@example.com</p>
+                        </div>
+
+                        <div>
+                            <i class="fa fa-phone"></i>
+                            <p>+1 5589 55488 55s</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-5 col-md-8">
+                    <div class="form">
+                        <div id="sendmessage">Your message has been sent. Thank you!</div>
+                        <div id="errormessage"></div>
+                        <form action="" method="post" role="form" class="contactForm">
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                                <div class="validation"></div>
+                            </div>
+                            <div class="text-center"><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-xs-12 text-lg-left text-center">
+                        <p class="copyright-text">
+                            © Get Saved
+                        </p>
+                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+    <a class="scrolltop" href="#"><span class="fa fa-angle-up"></span></a>
+
+ <script src="Bell/lib/jquery/jquery.min.js"></script>
+    <script src="Bell/lib/jquery/jquery-migrate.min.js"></script>
+    <script src="Bell/lib/superfish/hoverIntent.js"></script>
+    <script src="Bell/lib/superfish/superfish.min.js"></script>
+    <script src="Bell/lib/tether/js/tether.min.js"></script>
+    <script src="Bell/lib/stellar/stellar.min.js"></script>
+    <script src="Bell/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Bell/lib/counterup/counterup.min.js"></script>
+    <script src="Bell/lib/waypoints/waypoints.min.js"></script>
+    <script src="Bell/lib/easing/easing.js"></script>
+    <script src="Bell/lib/stickyjs/sticky.js"></script>
+    <script src="Bell/lib/parallax/parallax.js"></script>
+    <script src="Bell/lib/lockfixed/lockfixed.min.js"></script>
+
+    <!-- Template Specisifc Custom Javascript File -->
+    <script src="Bell/js/custom.js"></script>
+
+    <script src="Bell/contactform/contactform.js"></script>
 
 </body>
 
