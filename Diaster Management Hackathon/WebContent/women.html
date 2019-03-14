@@ -12,7 +12,9 @@
 
 </head>
 
-<body>
+<body onload="myFunction()" >
+
+<p id="demo"></p>
 
 
 
@@ -28,29 +30,31 @@
           <span aria-hidden="true">&times;</span>
         </button>
                 </div>
+                  <form action="Safety" method="post">
+                            <input type="hidden" class="form-control"  name="name" id="name" value="Emergency" required>
+                       <input type="hidden" name="latt" id="latt"   hidden required/>
+                    <input type="hidden" name="longi" id="longi" hidden required   />
+                            <input type="hidden"  name="phone"   class="form-control" value="Emergency " placeholder="+91 "  required>
+                     
+           <input type="hidden"  name="msg"   class="form-control" value=" " placeholder="Emergency "  required>
+                          
+                   
                 <div class="modal-body">
-                    <form>
-                        <div class="form-group">
-                            <label for="recipient-name" class="col-form-label">Name:</label>
-                            <input type="text" class="form-control" id="name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message-text" class="col-form-label">Message:</label>
-                            <textarea class="form-control" id="message-text"></textarea>
-                        </div>
+                      
+                     
 
-                        <div class="form-group">
-
-                    <label for="disabledTextInput">LATITUDE AND LONGITUDE</label>
-                    <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
-                        </div>
-                    </form>
+                    <label >LATITUDE AND LONGITUDE</label>
+                    <input type="text"   id="ad" class="form-control" placeholder="">
+                       
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Send message</button>
+                
                 </div>
+                </form>
             </div>
+            
         </div>
     </div>
 
@@ -245,6 +249,40 @@
     <script src="assests/jquery-3.3.1.min.js"></script>
     <script src="assests/masonry.pkgd.min.js"></script>
 
+  <script>
+    
+function myFunction() {
+  alert("We need your address");
+  getLocation();
+}
+</script>
+<script>
+var x = document.getElementById("demo");
+var y,z;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } 
+  
+  else 
+  { 
+  
+	  x.innerHTML = "Geolocation is not supported by this browser.";
+
+  }
+
+}
+
+function showPosition(position) {
+	
+  y=position.coords.latitude;
+  z=position.coords.longitude;
+  document.getElementById("latt").value =y;
+  document.getElementById("longi").value =z;
+  document.getElementById("ad").value =z+" "+y;
+
+}
+</script>
 </body>
 
 </html>
