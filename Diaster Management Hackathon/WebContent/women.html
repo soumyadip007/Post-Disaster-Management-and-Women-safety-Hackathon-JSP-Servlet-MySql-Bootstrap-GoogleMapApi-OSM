@@ -3,7 +3,9 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>WOMEN EMPOWERMENT</title>
+    
+	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
+    <title>Women Safety</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="assests/women.css">
 
@@ -25,33 +27,33 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">ARE YOU IN AN EMERGENCY?<br>QUICKLY FILL IT.</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">ARE YOU IN AN EMERGENCY?<br>Just click on</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
                 </div>
                   <form action="Safety" method="post">
-                            <input type="hidden" class="form-control"  name="name" id="name" value="Emergency" required>
-                       <input type="hidden" name="latt" id="latt"   hidden required/>
-                    <input type="hidden" name="longi" id="longi" hidden required   />
-                            <input type="hidden"  name="phone"   class="form-control" value="Emergency " placeholder="+91 "  required>
-                     
-           <input type="hidden"  name="msg"   class="form-control" value=" " placeholder="Emergency "  required>
-                          
-                   
+                  
                 <div class="modal-body">
                       
+                               <input type="hidden" class="form-control"  name="name" id="name" value="Emergency" >
+                       <input type="hidden" name="latt" id="latt"   hidden />
+                    <input type="hidden" name="longi" id="longi" hidden   />
+                            <input type="hidden"  name="phone"   class="form-control" value="Emergency "   >
                      
+                          
+                   
 
                     <label >LATITUDE AND LONGITUDE</label>
-                    <input type="text"   id="ad" class="form-control" placeholder="">
+                    <input type="text"   id="ad" class="form-control" placeholder="" readonly>
                        
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Send message</button>
+                    <button type="submit" class="btn btn-primary">Send Request</button>
                 
                 </div>
+                
                 </form>
             </div>
             
@@ -240,7 +242,28 @@
 
         </div>
     </div>
+   <form action="Safety" method="post">
+                  
+                <div class="modal-body">
+                      
+                               <input type="hidden" class="form-control"  name="name" id="name" value="Emergency" >
+                       <input type="hidden" name="latt" id="latt"   hidden />
+                    <input type="hidden" name="longi" id="longi" hidden   />
+                            <input type="hidden"  name="phone"   class="form-control" value="Emergency "   >
+                     
+                          
+                   
 
+                    <label >LATITUDE AND LONGITUDE</label>
+                    <input type="text"   id="ad" class="form-control" placeholder="">
+                       
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Click Here</button>
+                
+                </div>
+                
+                </form>
 
 
     <!-- Footer -->
