@@ -16,7 +16,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Admin page</title>
+    <title>Broadcast page</title>
    
 
     <!-- Bootstrap core CSS-->
@@ -57,15 +57,13 @@
       </form> 
 
       <!-- Navbar -->
-
+    
 
     </nav>
 
     <div id="wrapper">
 
       <!-- Sidebar -->
-     
-
       <div id="content-wrapper">
 
         <div class="container-fluid">
@@ -73,9 +71,9 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="BroadCast.jsp">Broadcast</a>
+              <a href="AdminHome.jsp">Broadcast</a>
             </li>
-            <li class="breadcrumb-item active">Disaster & Women Security</li>
+            <li class="breadcrumb-item active">Disaster</li>
           </ol>
 
           <!-- Icon Cards-->
@@ -99,7 +97,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-             Disaster </div>
+            Disaster </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
