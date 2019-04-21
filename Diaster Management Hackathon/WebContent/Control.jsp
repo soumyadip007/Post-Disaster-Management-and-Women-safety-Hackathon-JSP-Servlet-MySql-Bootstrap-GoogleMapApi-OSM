@@ -33,11 +33,7 @@
 
   </head>
 
-<%
-  response.setHeader("Cache-Control","no-cache,no-store,must-revaildate");
-	if(session.getAttribute("username")==null)
-	{response.sendRedirect("Login.jsp");}
-	%>
+
 
   <body id="page-top">
 
@@ -156,7 +152,7 @@
           <div class="card mb-3">
             <div class="card-header">
               <i class="fas fa-table"></i>
-              Data Table Example</div>
+              Data Table </div>
             <div class="card-body">
               <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
