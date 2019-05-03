@@ -71,7 +71,7 @@
           <!-- Breadcrumbs-->
           <ol class="breadcrumb">
             <li class="breadcrumb-item">
-              <a href="AdminHome.jsp">Broadcast</a>
+              <a href="BroadCast.jsp">Broadcast</a>
             </li>
             <li class="breadcrumb-item active">Disaster</li>
           </ol>
