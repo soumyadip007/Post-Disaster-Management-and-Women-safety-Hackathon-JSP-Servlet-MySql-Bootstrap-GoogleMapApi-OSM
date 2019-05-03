@@ -151,7 +151,7 @@
 	
 	     
 	    <sql:query var="listUsers"   dataSource="${con}">
-	        SELECT * FROM safe ;
+	        SELECT * FROM hack ;
 	    </sql:query>
     
     
@@ -162,9 +162,9 @@
                    
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
-                         <td>${user.help}</td>
-                      <td>${user.phone}</td>
-                      <td>${user.msg}</td>
+                         <td>${user.age}</td>
+                      <td>${user.ph}</td>
+                      <td>${user.blood}</td>
                        
             <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
                   
