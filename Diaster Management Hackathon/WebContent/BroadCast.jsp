@@ -105,9 +105,10 @@
                     <tr>
                      	<th>Id</th>
                       <th>Name</th>
-                      <th>type</th>
+                      <th>Age & Location</th>
                       <th>Phone</th>
-                      <th>Msg</th>
+                     
+                      <th>Blood Group</th>
                       <th>Get Location</th>
                       <th>Police Station</th>
                         <th>Hospital</th>
@@ -121,9 +122,9 @@
                     <tr> 		
                     <th>Id</th>
                       <th>Name</th>
-                      <th>type</th>
+                      <th>Age & Location</th>
                       <th>Phone</th>
-                      <th>Msg</th>
+                      <th>Blood Group</th>
                       <th>Get Location</th>
                       <th>Police Station</th>
                         <th>Hospital</th>
