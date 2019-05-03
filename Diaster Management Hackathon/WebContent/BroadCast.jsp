@@ -106,7 +106,6 @@
                      	<th>Id</th>
                       <th>Name</th>
                       <th>Age & Location</th>
-                      <th>Phone</th>
                      
                       <th>Blood Group</th>
                       <th>Get Location</th>
@@ -123,7 +122,7 @@
                     <th>Id</th>
                       <th>Name</th>
                       <th>Age & Location</th>
-                      <th>Phone</th>
+                  
                       <th>Blood Group</th>
                       <th>Get Location</th>
                       <th>Police Station</th>
@@ -164,7 +163,6 @@
                          <td><strong>${user.id}<strong></strong></td>
                       <td>${user.name}</td>
                          <td>${user.age}</td>
-                      <td>${user.ph}</td>
                       <td>${user.blood}</td>
                        
             <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
@@ -195,7 +193,8 @@
         <footer class="sticky-footer">
           <div class="container my-auto">
             <div class="copyright text-center my-auto">
-              <span>Copyright © Hackathon UEMK 2019</span>
+              <span>Copyright © Developed By Soumyadip & </span>
+               <span> Powered By Team-Cognito</span>
             </div>
           </div>
         </footer>
