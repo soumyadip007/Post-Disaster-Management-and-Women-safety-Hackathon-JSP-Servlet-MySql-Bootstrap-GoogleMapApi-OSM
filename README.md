@@ -10,7 +10,7 @@ A Dynamic web project for Post Disaster management and women security with auto 
 
 # Got 3rd position in Project competition (UEMK,28th Apr)
 
-# Got 1st position in  hackathon (BPPIMT,4th Mayr)
+# Got 1st position in  hackathon (BPPIMT,4th May)
 
 
 
