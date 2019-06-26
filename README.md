@@ -12,6 +12,8 @@ A Dynamic web project for Post Disaster management and women security with auto 
 
 # Got 1st position in  hackathon (BPPIMT,4th May)
 
+# Deployed during FANI (187 users with in 4 hrs)
+
 
 
 Our Apk Link: https://github.com/soumyadip007/Disaster-Management-Hackatohn-Jsp-Servlet-Javascript-Bootstrap-GoogleMapApi/tree/master/Diaster%20Management%20Hackathon/WebContent/App
