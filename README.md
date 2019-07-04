@@ -23,3 +23,5 @@ A Dynamic web project for Post Disaster management and women security with auto 
 Our Apk Link: https://github.com/soumyadip007/Disaster-Management-Hackatohn-Jsp-Servlet-Javascript-Bootstrap-GoogleMapApi/tree/master/Diaster%20Management%20Hackathon/WebContent/App
 
 # Patent filed 
+
+# Raspberry Connection (Yet to implement)
