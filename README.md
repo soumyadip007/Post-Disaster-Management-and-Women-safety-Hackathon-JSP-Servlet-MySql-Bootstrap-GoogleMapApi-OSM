@@ -16,7 +16,7 @@ A Dynamic web project for Post Disaster management and women security with auto 
 
 # Got 1st position in  hackathon (BPPIMT,4th May)
 
-# Deployed during FANI (187 users with in 4 hrs)
+# Deployed during FANI (187 users within 4 hrs)
 
 
 
