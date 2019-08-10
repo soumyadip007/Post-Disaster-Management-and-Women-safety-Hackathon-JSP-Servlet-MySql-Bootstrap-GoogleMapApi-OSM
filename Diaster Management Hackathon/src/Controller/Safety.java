@@ -14,7 +14,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class Safety
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
  */
 public class Safety extends HttpServlet {
 	private static final long serialVersionUID = 1L;

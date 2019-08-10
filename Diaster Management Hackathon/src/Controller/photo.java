@@ -16,9 +16,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.Part;
 
-
 /**
- * Servlet implementation class photo
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
  */
 @WebServlet("/photo")
 @MultipartConfig(fileSizeThreshold=1024*1024*100,maxFileSize=1024*1024*100,maxRequestSize=1024*1024*100)
