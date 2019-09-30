@@ -226,13 +226,13 @@
                       <td>${user.blood}</td>
                       <td>${user.ph}</td>
                        
-            <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z">Get Location</a></strong></td>
+            <td style="color:blue;"><strong><a href="https://www.google.co.in/maps/@${user.latt},${user.longi},20z" target="_blank">Get Location</a></strong></td>
                   
-                     <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:Crimson ;">Police Station</a></strong></td>
+                     <td style="color:red;"><strong><a href=" https://www.google.com/maps/search/police+stations/@${user.latt},${user.longi},13z/data=!3m1!4b1"  target="_blank" style="color:Crimson ;">Police Station</a></strong></td>
                  
-               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
+               <td ><strong ><a href=" https://www.google.com/maps/search/fire+brigade/@${user.latt},${user.longi},13z/data=!3m1!4b1" target="_blank" style="color:LightSlateGrey;">Fire Brigade</a></strong></td>
                    
-                     <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  style="color:LimeGreen ;">Hospital</a></strong></td>
+                     <td><strong><a href=" https://www.google.com/maps/search/hospitals/@${user.latt},${user.longi},13z/data=!3m1!4b1"  target="_blank" style="color:LimeGreen ;">Hospital</a></strong></td>
                 
                       <td>${user.time}</td>
                       <td>${user.latt}</td>
