@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: 'Open Sans';
+    text-align: center;
+    width: 100%;
+    overflow-x: hidden;
+    background-image: url(diagmonds.png);
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.main-gallery {}
+
+#artHolder {
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-justify-content: space-around;
+    /* Safari 6.1+ */
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+.center {
+    text-align: center;
+}
+
+h1,
+h2 {
+    color: #1affff;
+    text-align: center;
+    font-family: 'Quicksand';
+}
+
+h1 span {
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.5em;
+    display: block;
+}
+
+.gallery {
+    padding: 0 !important;
+    line-height: 0;
+    font-size: 0;
+    /* box-sizing: border-box;
+  display: inline;
+  float: left;
+  */
+    transform: scale(.95);
+    transition: all .1s ease-in-out;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    width: 250px;
+}
+
+.gallery img {
+    max-width: 250px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+}
+
+figcaption a {
+    color: #00ADDC;
+    -o-transition: .5s;
+    -ms-transition: .5s;
+    -moz-transition: .5s;
+    -webkit-transition: .5s;
+    transition: .5s;
+}
+
+figcaption a:hover {
+    color: #FEE4FD;
+}
+
+figcaption blockquote {
+    display: inline;
+    padding: 0;
+    margin: 0;
+}
+
+figcaption p {
+    display: inline;
+    padding: 0;
+    margin: 5px;
+}
+
+.gallery:hover,
+.gallery:focus {
+    transform: scale(1);
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 0;
+}
+
+.gallery:hover img,
+.gallery:focus img {
+    border-radius: 0;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+
+* html .clearfix {
+    zoom: 1;
+}
+
+/* IE6 */
+
+*:first-child + html .clearfix {
+    zoom: 1;
+}
+
+/* IE7 */
+
+@media screen and (max-width: 1249px) {
+    #artHolder {
+        max-width: 1000px;
+    }
+}
+
+@media screen and (max-width: 1020px) {
+    #artHolder {
+        max-width: 750px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 761px) {
+    #artHolder {
+        max-width: 500px;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    #artHolder {
+        max-width: 250px;
+    }
+}
+
+
+
+
+
+/*Custom*/
+
+.grid-item {
+    width: 200px;
+}
+
+.grid-item--width2 {
+    width: 400px;
+}
+
+.text1{
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    font-size: 40px;
+    padding: 15px;
+    
+}
+
+.box{
+    background-color: rgba(0,0,0,0.5);
+    padding: 30px 0;
+}
+
+
+.box1{
+    background-color: rgba(249, 191, 59,0.7);
+    padding: 30px 0;
+}

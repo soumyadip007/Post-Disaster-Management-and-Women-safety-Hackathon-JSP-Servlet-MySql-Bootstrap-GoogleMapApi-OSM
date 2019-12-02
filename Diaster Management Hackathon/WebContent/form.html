@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head >
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-3336161399804648",
+          enable_page_level_ads: true
+     });
+</script>
+	<link rel="icon" type="image/png" href="Error/pic.jpg"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Page</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="reg/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="reg/css/style.css">
+</head>
+
+<body onload="myFunction()" >
+
+
+<p id="demo"></p>
+    <div class="main" >
+
+        <div class="container">
+            <form action="GetLoc" class="appointment-form" id="appointment-form">
+                <h2>Contact to Disaster Team   </h2>
+                <div class="form-group-1">
+                    <input type="text" name="name" id="title" placeholder="Enter your name" required />
+                    <input type="text" name="age" id="name" placeholder="Enter your age & Locality" required />
+                   <input type="number" name="phone" id="phone" placeholder="Phone number" required />
+                    <input type="text" name="blood" id="phone" placeholder="Enter your Blood group (Optional)"  />
+                   
+                    <input type="hidden" name="latt" id="latt"   hidden />
+                    <input type="hidden" name="longi" id="longi" hidden />
+                       <input type="text" name="ad" id="ad" placeholder="Your Lattitude and longitude" required readonly/>
+                 
+                    <div class="select-list">
+                        <select name="type" id="type" required>
+                            <option slected value="Not Spec">Disaster type</option
+                            > <option value="Flood">Fani</option>
+                            <option value="Flood">Flood</option>
+                            <option value="Fire">Fire</option>
+                             <option value="Earthquakes">Earthquakes</option>
+                            <option value="Wildfires">Wildfires</option>
+                            <option value="Drought">Drought</option>
+                            <option value="Tornadoes and Severe Storms">Tornadoes and Severe Storms</option>
+                               <option value="Hurricanes and Tropical Storms">Hurricanes and Tropical Storms</option>
+                            
+                             <option value="Others">Others</option>
+                            
+                            
+                        </select>
+                    </div>
+                </div>
+                
+                
+                <div class="form-submit">
+                 <button type ="submit"   class="submit"  onclick="getLocation()">Send</button>
+  
+                 </div>
+            </form>
+        </div>
+
+    </div>
+      <button class="submit"    onclick="getLocation()">Send</button>
+  
+   <!--  <button class="submit" onclick="getLocation()">Co-ordinate</button>
+  	
+    JS -->
+    <script src="reg/vendor/jquery/jquery.min.js"></script>
+    <script src="reg/js/main.js"></script>
+    
+<script>
+function myFunction() {
+  alert("Get-Saved wants to access your location : Click on Allow");
+  getLocation();
+}
+</script>
+<script>
+var x = document.getElementById("demo");
+var y,z;
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  
+  y=position.coords.latitude;
+  z=position.coords.longitude;
+  document.getElementById("latt").value =y;
+  document.getElementById("longi").value =z;
+  document.getElementById("ad").value =z+" "+y;
+
+}
+
+</script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+
+
+
+</html>

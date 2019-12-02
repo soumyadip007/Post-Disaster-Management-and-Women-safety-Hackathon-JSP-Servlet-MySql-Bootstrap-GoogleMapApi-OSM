@@ -1,0 +1,58 @@
+a:focus, a:active { text-decoration: none; outline: none; @include transition(all 300ms ease 0s); }
+input, select, textarea { outline: none; @include appearance( unset ); }
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    @include appearance( none );
+    margin: 0;
+}
+input:focus, select:focus, textarea:focus { outline: none; @include box-shadow-input(none); }
+input[type=checkbox] { @include appearance( checkbox ); }
+input[type=radio] { @include appearance( radio ); }
+img { max-width: 100%; height: auto; }
+figure { margin: 0; }
+p { margin-bottom: 0px; }
+input:-webkit-autofill {
+    @include box-shadow(0 0 0 30px white inset);
+}
+h2 { 
+    line-height: 1.8; 
+    margin: 0; 
+    padding: 0;
+    font-weight: bold; 
+    color: $black-color;
+    font-family: 'Roboto Slab';
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+h3 {
+    font-weight: bold; 
+    color: $black-color;
+    font-size: 15px;
+    margin: 0px;
+    margin-bottom: 35px;
+}
+.clear { clear: both; }
+body {
+	font-size: 13px;
+    line-height: 1.8;
+    color: #fff;
+    background-image: url('../images/body-bg.jpg');
+    background-repeat: no-repeat;
+    @include background-size(cover);
+    background-position: center center;
+    font-weight: 400;
+    font-family: 'Roboto Slab';
+    margin: 0px;
+    // padding: 150px 0;
+}
+.main {
+    padding: 60px 0;
+    position: relative;
+}
+.container {
+    width: 586px;
+    background: #fff;
+    margin-left: 165px;
+    @include border-radius(10px);
+}
+

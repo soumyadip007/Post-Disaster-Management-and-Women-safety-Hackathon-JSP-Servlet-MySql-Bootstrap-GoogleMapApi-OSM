@@ -1,0 +1,53 @@
+.hero-img{
+	width: 100%;
+}
+
+.center-text{
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	font-size:8vw;
+}
+
+.slider{
+	width: 100%;
+}
+
+.dot {
+  height: 200px;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.circle{
+	margin-top: 80px;
+}
+
+
+.center-text2{
+	color: #fff;
+}
+@media only screen and (max-width:576px){
+	.dot{
+		height:60px;
+	width:60px;
+	}
+	
+	.circle{
+		font-size: 12px;
+	margin-top: 8px;
+}
+	
+	.center-text1{
+	font-family: 'Lato', sans-serif;
+	text-align: center;
+	font-weight: 700;
+	padding: 10px;
+	font-size:10vw;
+}
+
+	
+}
