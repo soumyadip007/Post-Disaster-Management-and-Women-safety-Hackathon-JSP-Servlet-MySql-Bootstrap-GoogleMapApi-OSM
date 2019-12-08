@@ -54,6 +54,16 @@ Our Apk Link: https://github.com/soumyadip007/Disaster-Management-Hackatohn-Jsp-
 <img src="./Diaster Management Hackathon/img/p2.jpeg" >
 
 
+## Copyright @soumyadip007
+```shell
+/**
+ * 
+ * @author Soumyadip Chowdhury
+ * @github soumyadip007
+ *
+ */
+
+```
 # Patent filed 
 
 # Raspberry Connection (Yet to implement)
