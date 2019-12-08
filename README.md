@@ -42,6 +42,8 @@ Our Apk Link: https://github.com/soumyadip007/Disaster-Management-Hackatohn-Jsp-
 # UEMK Hackathon 2019 (1st pos)
 <img src="./Diaster Management Hackathon/img/H1.jpg" >
 <img src="./Diaster Management Hackathon/img/H2.jpeg" >
+
+
 # BPPIMT Hackathon 2019 (1st pos)
 <img src="./Diaster Management Hackathon/img/BP1.jfif" >
 <img src="./Diaster Management Hackathon/img/BP2.jfif" >
@@ -49,7 +51,9 @@ Our Apk Link: https://github.com/soumyadip007/Disaster-Management-Hackatohn-Jsp-
 
 # UEMK Project Competition 2019 (3rd pos)
 <img src="./Diaster Management Hackathon/img/P1.jpeg" >
-<img src="./Diaster Management Hackathon/img/P2.jpeg" >
+<img src="./Diaster Management Hackathon/img/p2.jpeg" >
+
+
 # Patent filed 
 
 # Raspberry Connection (Yet to implement)
