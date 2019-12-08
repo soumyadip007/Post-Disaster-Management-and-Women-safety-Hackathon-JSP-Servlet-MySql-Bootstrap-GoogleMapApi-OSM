@@ -1,9 +1,6 @@
 # Post-Disaster-Management-and-Women-safety-Hackathon-JSP-Servlet-MySql-Bootstrap-GoogleMapApi-OSM
 A Dynamic web project for Post Disaster management and women security with auto location tracking services with Cloud deployment and OSM support. 
 
-
-# [![Build Status](https://travis-ci.org/rails/spring.svg?branch=master)](https://travis-ci.org/rails/spring)
-
 # Got 1st position in hackathon (Ureck-a-thon, 23rd - 24th FEB,2019)
  Hackathon organised by ( 𝐂𝐨𝐥𝐥𝐚𝐛𝐨𝐫𝐚𝐭𝐨𝐫𝐬 ):
  1. Facebook Developer Circle: Kolkata
